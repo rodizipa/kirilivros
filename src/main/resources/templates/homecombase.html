@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html th:replace="~{base :: base( ~{::title}, ~{:: #conteudo})}" lang="pt-br">
+<!--ou usar 'titulo'-->
+
+<head>
+    <title>Home</title>
+</head>
+
+<div id="conteudo" class="card" th:each="produto : ${produtos}">
+    <div class="card-header" th:text="${produto.nome}">Nome do Produto</div>
+    <div class="card-body row">
+        <div class="col-12 col-md-8rodizip mb-3">
+            <div th:text="${produto.autor}">Autor</div>
+            <div th:text="${produto.preco}">Preço</div>
+            <div th:text="${produto.url}">Url</div>
+            <div th:text="${produto.sinopse}">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div>
+                <img class="img-thumbnail" th:src="${produto.imagem}" src=""/>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
+
+

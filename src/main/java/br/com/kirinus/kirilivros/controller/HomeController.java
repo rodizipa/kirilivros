@@ -23,6 +23,6 @@ public class HomeController {
     public String helloWorld(Model model){
         List<Produto> lista = produtoRepository.findAll();
         model.addAttribute("produtos", lista);
-        return "home";
+        return "homecombase";
     }
 }

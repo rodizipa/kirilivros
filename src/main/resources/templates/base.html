@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="base(titulo, conteudo)">
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title th:replace="${titulo}">KiriLivros</title>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a th:href="@{/}" class="navbar-brand">Home</a>
+        </div>
+        <div class="navbar-nav">
+            <a th:href="@{/produto/novo}" class="nav-link">Novo</a>
+        </div>
+    </nav>
+
+    <div th:insert="${conteudo} ?: ~{}"></div>
+</div>
+</body>
+</html>
+
+
+<!--Exemplo de fragmento-->
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a th:href="@{/}" class="navbar-brand">Home</a>
+        </div>
+        <div class="navbar-nav">
+            <a th:href="@{/produto/novo}" class="nav-link">Novo</a>
+        </div>
+    </nav>
+</div>
+
+<!--Acessar com ~{pagina :: fragmento} usando th:replace ou th:insert-->
