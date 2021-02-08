@@ -22,7 +22,7 @@
         <div class="card-body row">
             <div class="col-12 col-md-8rodizip mb-3">
                 <div th:text="${produto.autor}">Autor</div>
-                <div th:text="${produto.preco}">Preço</div>
+                <div th:text="${#numbers.formatDecimal(produto.preco, 3, 'POINT', 2, 'COMMA')}">Preço</div>
                 <div th:text="${produto.url}">Url</div>
                 <div th:text="${produto.sinopse}">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
             </div>

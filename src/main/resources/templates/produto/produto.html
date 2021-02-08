@@ -5,8 +5,7 @@
     <title>KiriLivros</title>
 </head>
 <body>
-
-    <div>Nome da Obra:</div>
+    <div th:text="${produto?.nome} ?: 'Nome da Obra:'">Nome da Obra:</div>
     <div>Autor:</div>
     <div>Preço:</div>
     <div>Url:</div>
