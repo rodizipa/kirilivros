@@ -1,0 +1,6 @@
+2021-01-18 23:38:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (PRODUTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PRODUTO"("ID","AUTOR","IMAGEM","NOME","PRECO","SINOPSE","URL")VALUES(?,?,?,?,?,?,?) [22018-200]
+2021-01-18 23:38:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (PRODUTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PRODUTO"("ID","AUTOR","IMAGEM","NOME","PRECO","SINOPSE","URL")VALUES(?,?,?,?,?,?,?) [22018-200]

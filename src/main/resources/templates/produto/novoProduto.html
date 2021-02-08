@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>KiriLivros</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Home</a>
+    </div>
+    <div class="navbar-nav">
+        <a href="#" class="nav-link">Novo</a>
+    </div>
+</nav>
+<div class="container">
+    <h1>Novo Produto</h1>
+    <div class="card">
+        <div class="card-body">
+            <form th:object="${requisicaoProdutoDTO}" action="/produto/save" method="POST">
+                <div>
+                    <label for="nomeProduto">Produto</label>
+                    <input th:field="*{nomeProduto}" th:errorclass="is-invalid" class="form-control" type="text" placeholder="Guia do mochileiro das Galáxias"/>
+                    <small>Informe o nome do produto.</small>
+                    <div th:errors="*{nomeProduto}" class="invalid-feedback">
+
+                    </div>
+                </div>
+                <div>
+                    <label for="autor">Autor</label>
+                    <input th:field="*{autor}" th:errorclass="is-invalid" class="form-control" type="text" placeholder="Autor"/>
+                    <small>Informe o nome do autor.</small>
+                    <div th:errors="*{autor}" class="invalid-feedback">
+
+                    </div>
+                </div>
+                <div>
+                    <label for="preco">Preço</label>
+                    <input th:field="*{preco}" class="form-control" type="number" placeholder="10.99"/>
+                    <small>Informe o preço do produto.</small>
+                    <div th:errors="*{preco}">
+
+                    </div>
+                </div>
+                <div>
+                    <label for="url">Url</label>
+                    <input th:field="*{url}" class="form-control" type="text" placeholder="http://amazon.com.br/xcs0902"/>
+                    <small>Informe a URL do produto.</small>
+                    <div th:errors="*{url}">
+
+                    </div>
+                </div>
+                <div>
+                    <label for="sinopse">Sinopse</label>
+                    <input th:field="*{sinopse}" class="form-control" type="text" placeholder="A vida de fulano beltrano é assim"/>
+                    <small>Informe a descrição do produto.</small>
+                    <div th:errors="*{sinopse}">
+
+                    </div>
+                </div>
+                <div>
+                    <label for="imagem">Imagem</label>
+                    <input th:field="*{imagem}" class="form-control" type="text" placeholder="http://imgur.com/2s90ds9a"/>
+                    <small>Informe a imagem do produto.</small>
+                    <div th:errors="*{imagem}">
+
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
